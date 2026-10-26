@@ -19,7 +19,7 @@ Rules for any AI coding agent working on this machine.
   chezmoi add <path>
   ```
 - Templates use chezmoi's syntax (`.tmpl` files, `chezmoiData`, etc.). Don't hardcode machine-specific values when a template variable exists.
-- Commit and push each change in the source directory with a descriptive message (the repo is `your-dotfiles`).
+- Commit and push each change in the source directory with a descriptive message (the repo is `natelia/dotfiles`).
 
 ## General
 
