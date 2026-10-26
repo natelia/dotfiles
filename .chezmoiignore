@@ -1,0 +1,7 @@
+.agents/skills/*/node_modules
+
+# Hypr/Omarchy config only applies on machines whose OS is Omarchy.
+{{ if ne .chezmoi.osRelease.id "omarchy" }}
+.config/hypr
+.config/omarchy
+{{ end }}

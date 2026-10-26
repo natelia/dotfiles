@@ -1,0 +1,61 @@
+shell-integration = fish
+shell-integration-features = no-cursor,sudo,title
+command = fish -i -c herdr
+
+theme = Gruvbox Dark
+font-family = "LigaMonaco Nerd Font"
+font-size = 11
+mouse-scroll-multiplier = 0.5
+
+# Font rendering with ligatures
+font-feature = +calt
+font-feature = +liga
+font-thicken = true
+
+# Window settings
+window-padding-x = 8
+window-padding-y = 8
+window-inherit-working-directory = true
+window-save-state = always
+window-step-resize = true
+
+# Clipboard
+clipboard-read = allow
+clipboard-write = allow
+copy-on-select = clipboard
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# Clickable URLs
+link-url = true
+
+# Terminal shortcuts
+# Ctrl+Shift+C sends SIGINT; copy is handled by copy-on-select.
+# Ctrl+Backspace deletes the previous word.
+keybind = ctrl+shift+c=text:\x03
+keybind = ctrl+backspace=text:\x17
+# Shift+Enter sends ESC+CR (alt+enter). Pi binds alt+enter to newline
+# (keybindings.json); Herdr does not forward the Kitty keyboard protocol.
+keybind = shift+enter=text:\x1b\r
+
+# Let Super shortcuts pass through to Hyprland.
+keybind = super+g=unbind
+keybind = super+y=unbind
+keybind = super+n=unbind
+keybind = super+h=unbind
+keybind = super+t=unbind
+keybind = super+s=unbind
+keybind = super+o=unbind
+keybind = super+b=unbind
+keybind = super+q=unbind
+keybind = super+;=unbind
+keybind = super+f=unbind
+
+# Wayland/Hyprland
+window-decoration = true
+# Flat GTK4/Adwaita styling
+adw-toolbar-style = flat
+# Each window is a separate process — safer on Wayland
+gtk-single-instance = false

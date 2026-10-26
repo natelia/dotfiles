@@ -1,0 +1,37 @@
+{
+  "lastChangelogVersion": "1.4.0",
+  "enableSkillCommands": true,
+  "defaultTools": ["+codemode"],
+  "defaultProvider": "zai",
+  "defaultModel": "glm-5.3",
+  "theme": "gruvbox-dark-hard",
+  "npmCommand": [
+    "pnpm"
+  ],
+  "packages": [
+    "git:github.com/nicobailon/pi-web-access",
+    "npm:@ogulcancelik/pi-herdr",
+    "npm:pi-subagents",
+    "npm:pi-zentui",
+    "npm:pi-hermes-memory",
+    {
+      "source": "git:github.com/stray-nick/terse-agent-output",
+      "extensions": [
+        "+extensions/terse-style/index.ts"
+      ]
+    },
+    "git:github.com/DietrichGebert/ponytail",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:@vanillagreen/pi-tool-renderer",
+    "npm:@demigodmode/pi-web-agent",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-agent-browser-native@0.9.6"
+  ],
+  "defaultThinkingLevel": "medium",
+  "hideThinkingBlock": true,
+  "enabledModels": [
+    "zai/glm-5.3",
+    "crowbot/gpt-6.1-sol",
+    "zai/glm-5.3-flash"
+  ]
+}

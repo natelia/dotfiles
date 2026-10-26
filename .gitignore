@@ -1,0 +1,23 @@
+# Node / JS
+**/node_modules/
+**/dist/
+**/build/
+
+# Python
+**/.venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/*.pyc
+
+# Local agent artifacts
+.pi-subagents/
+
+# Local env / editor / OS noise
+**/.env
+**/.env.*
+**/.DS_Store
+**/.idea/
+**/.vscode/
+omaseed-*.pkg.tar.zst

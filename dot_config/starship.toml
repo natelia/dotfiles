@@ -1,0 +1,80 @@
+
+# Starship prompt configuration - Gruvbox themed
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+command_timeout = 3000
+
+# Format: left prompt with git, right prompt with duration
+format = """
+$hostname\
+$directory\
+${custom.git_branch_normal}\
+${custom.git_worktree_name}${custom.git_branch_worktree}\
+$git_status\
+$line_break\
+$character"""
+
+right_format = "$cmd_duration"
+
+[hostname]
+ssh_only = true
+format = "[🌐 $hostname](bold #fe8019) "  # Gruvbox orange
+disabled = false
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style)"
+truncation_length = 1
+style = "bold #fabd2f"  # Gruvbox yellow
+
+[character]
+success_symbol = "[❯](bold #b8bb26)"  # Gruvbox green
+error_symbol = "[❯](bold #fb4934)"    # Gruvbox red
+
+# Disabled due to reftable backend incompatibility with libgit2
+# See: https://github.com/starship/starship/issues/6086
+[git_branch]
+disabled = true
+
+# Normal git repo (not a worktree) - green
+[custom.git_branch_normal]
+command = "git symbolic-ref --short HEAD 2>/dev/null"
+when = "git rev-parse --is-inside-work-tree 2>/dev/null && ! test -f $(git rev-parse --git-dir 2>/dev/null)/commondir"
+format = " [$output]($style) "
+style = "bold #b8bb26"  # Gruvbox green
+ignore_timeout = true
+
+# Worktree name - orange prefix
+[custom.git_worktree_name]
+command = "basename $(dirname $(git rev-parse --show-toplevel))"
+when = "test -f $(git rev-parse --git-dir 2>/dev/null)/commondir"
+format = " [$output]($style) "
+style = "bold #fe8019"  # Gruvbox orange
+ignore_timeout = true
+
+# Worktree branch - green
+[custom.git_branch_worktree]
+command = "git symbolic-ref --short HEAD 2>/dev/null"
+when = "test -f $(git rev-parse --git-dir 2>/dev/null)/commondir"
+format = "[$output]($style) "
+style = "bold #b8bb26"  # Gruvbox green
+ignore_timeout = true
+
+[git_status]
+format = "[$all_status$ahead_behind]($style)"
+style = "bold #fb4934"  # Gruvbox red
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+staged = "+${count}"
+modified = "!${count}"
+untracked = "?${count}"
+deleted = "✘${count}"
+stashed = "📦${count}"
+
+[cmd_duration]
+min_time = 2000
+format = "[$duration]($style)"
+style = "bold #928374"  # Gruvbox gray

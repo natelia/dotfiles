@@ -1,0 +1,7 @@
+#!/bin/sh
+# Open a new herdr tab and start pi in it. Bound to alt+y in herdr config.toml.
+set -eu
+out=$(herdr tab create --focus)
+pane=$(printf '%s' "$out" | jq -er '.result.root_pane.pane_id')
+name="pi-$(date +%s)-$$"
+herdr agent start "$name" --kind pi --pane "$pane" >/dev/null

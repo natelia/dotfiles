@@ -1,0 +1,50 @@
+onboarding = false
+
+[theme]
+name = "gruvbox"
+auto_switch = false
+
+[terminal]
+default_shell = "/usr/bin/fish"
+
+[ui]
+agent_panel_sort = "priority"
+prompt_new_workspace_name = true
+prompt_new_tab_name = false
+hide_tab_bar_when_single_tab = false
+pane_scrollbars = false
+
+[keys]
+# Zellij-style direct shortcuts
+new_tab = "alt+t"
+next_tab = "alt+n"
+previous_tab = "alt+p"
+close_tab = "alt+w"
+switch_tab = "alt+1..9"
+split_vertical = "alt+backslash"
+split_horizontal = "alt+minus"
+close_pane = "alt+q"
+zoom = "alt+z"
+focus_pane_left = "alt+h"
+focus_pane_down = "alt+j"
+focus_pane_up = "alt+k"
+focus_pane_right = "alt+l"
+workspace_picker = "alt+s"
+edit_scrollback = "alt+slash"
+
+# Herdr-specific indexed navigation
+switch_workspace = "prefix+shift+1..9"
+focus_agent = "prefix+alt+1..9"
+
+[ui.toast]
+delivery = "terminal"
+
+[experimental]
+kitty_graphics = true
+pane_history = false
+
+# alt+y: new tab with pi running in it
+[[keys.command]]
+key = "alt+y"
+type = "shell"
+command = "~/.local/bin/herdr-new-pi-tab"
