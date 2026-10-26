@@ -2,7 +2,7 @@
   "lastChangelogVersion": "1.4.0",
   "enableSkillCommands": true,
   "defaultTools": ["+codemode"],
-  "defaultProvider": "zai",
+  "defaultProvider": "zai-coding-cn",
   "defaultModel": "glm-5.3",
   "theme": "gruvbox-dark-hard",
   "npmCommand": [
@@ -30,8 +30,7 @@
   "defaultThinkingLevel": "medium",
   "hideThinkingBlock": true,
   "enabledModels": [
-    "zai/glm-5.3",
-    "crowbot/gpt-6.1-sol",
-    "zai/glm-5.3-flash"
+    "zai-coding-cn/glm-5.3",
+    "zai-coding-cn/glm-5.3-flash"
   ]
 }

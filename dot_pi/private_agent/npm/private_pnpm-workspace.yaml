@@ -1,0 +1,5 @@
+allowBuilds:
+  '@demigodmode/pi-web-agent': true
+  '@google/genai': true
+  protobufjs: true
+nodeLinker: hoisted
