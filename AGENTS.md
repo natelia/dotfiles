@@ -4,7 +4,7 @@ Rules for any AI coding agent working on this machine.
 
 ## Dotfiles (chezmoi)
 
-- **All dotfiles changes must go through chezmoi.** Never edit dotfiles directly in `$HOME` (e.g. `~/.zshrc`, `~/.gitconfig`, `~/.config/...`).
+- **All dotfiles changes must go through chezmoi.** Never edit dotfiles directly in `$HOME` (e.g. `~/.config/fish/config.fish`, `~/.gitconfig`, `~/.config/...`).
 - The chezmoi source directory is `~/.local/share/chezmoi`. Edit files there instead of editing targets in `$HOME`.
 - After changing files in the source directory, apply with:
   ```bash
@@ -23,6 +23,7 @@ Rules for any AI coding agent working on this machine.
 
 ## General
 
+- The user's login shell is fish. Write shell commands, aliases, and scripts in fish syntax. Shell config lives in `~/.config/fish/` and is chezmoi-managed.
 - Do not edit files under `$HOME` that are managed by other tools without checking first (`chezmoi managed` lists chezmoi's targets).
 - Prefer minimal, targeted edits over rewrites.
 
