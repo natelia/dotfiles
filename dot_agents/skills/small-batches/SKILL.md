@@ -1,6 +1,6 @@
 ---
 name: small-batches
-description: Natalia's default way of shipping code — new branch per task, work planned in small chunks, small reviewable PRs, plain-language explanation before merge and after deploy. Use for any coding task in her projects unless she opts out. Triggers: "nowy branch", "zrób branch na to", "małe PR-y", "podziel na zadania", "po naszymu", "branch per task", "small PRs", "praca małymi krokami".
+description: Natalia's default way of shipping code — new branch per task, work planned in small chunks, small reviewable PRs, plain-language explanation before merge and after deploy. Use for any coding task in her projects unless she opts out. Triggers: "as usual", "new branch for this one", "small PRs", "split into tasks", "our way of working", "branch per task", "small steps".
 ---
 
 # Small batches
@@ -11,9 +11,12 @@ read and understood in a few minutes, it is too big.
 
 ## When to Use
 
-- Any feature, fix, or refactor in the user's projects, including briefly and luft.
-- The user says "po naszymu", "zrób to na branchu", asks for a PR, or gives a list of tasks.
-- Not needed for trivial single-file edits she asks for inline, or when she explicitly asks for a direct merge (for example "make main up to date").
+- By default, for any feature, fix, or refactor in the user's projects,
+  including briefly and luft. Trigger phrases reinforce this; they are
+  not a condition.
+- Not needed for trivial single-file edits she asks for inline, or when
+  she explicitly asks for a direct merge (for example "make main up to
+  date").
 
 ## Procedure
 
