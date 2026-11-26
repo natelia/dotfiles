@@ -3,7 +3,7 @@
   "enableSkillCommands": true,
   "defaultTools": ["+codemode"],
   "defaultProvider": "zai-coding-cn",
-  "defaultModel": "glm-5.3",
+  "defaultModel": "glm-5.4",
   "theme": "gruvbox-dark-hard",
   "npmCommand": [
     "pnpm"
@@ -30,6 +30,7 @@
   "defaultThinkingLevel": "medium",
   "hideThinkingBlock": true,
   "enabledModels": [
+    "zai-coding-cn/glm-5.4",
     "zai-coding-cn/glm-5.3",
     "zai-coding-cn/glm-5.3-flash"
   ]
